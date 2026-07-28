@@ -420,6 +420,13 @@ namespace RN
 		bodyInterface->SetGravityFactor(*_actor, enable ? 1.0f : 0.0f);
 	}
 
+	void JoltDynamicBody::SetGravityFactor(float factor)
+	{
+		JPH::PhysicsSystem *physics = JoltWorld::GetSharedInstance()->GetJoltInstance();
+		JPH::BodyInterface &bodyInterface = physics->GetBodyInterface();
+		bodyInterface.SetGravityFactor(*_actor, factor);
+	}
+
 	void JoltDynamicBody::SetFriction(float friction)
 	{
 		JPH::PhysicsSystem *physics = JoltWorld::GetSharedInstance()->GetJoltInstance();

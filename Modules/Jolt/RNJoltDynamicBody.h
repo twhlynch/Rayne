@@ -54,6 +54,7 @@ namespace RN
 		JTAPI void SetMaxDepenetrationVelocity(float max);
 		JTAPI void SetEnableCCD(bool enable);
 		JTAPI void SetEnableGravity(bool enable);
+		JTAPI void SetGravityFactor(float factor);
 		JTAPI void SetEnableKinematic(bool enable);
 		JTAPI void SetEnableSimulation(bool enable);
 		JTAPI void LockMovement(uint32 lockFlags);
